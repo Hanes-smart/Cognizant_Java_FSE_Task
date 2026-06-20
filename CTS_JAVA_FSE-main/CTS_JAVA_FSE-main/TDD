@@ -1,0 +1,90 @@
+JUnit 5 and Mockito Exercises
+Exercise 1: Setting Up JUnit
+
+Calculator Class
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+JUnit Test
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CalculatorTest {
+    @Test
+    void testAdd() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(10, 20);
+        assertEquals(30, result);
+    }
+}
+
+Maven Dependency
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.10.2</version>
+    <scope>test</scope>
+</dependency>
+
+Exercise 3: Assertions in JUnit
+
+String Utility Class
+
+public class StringUtils {
+    public String toUpperCase(String text) {
+        if (text == null) {
+            return null;
+        }
+        return text.toUpperCase();
+    }
+}
+
+Test Class Using Assertions
+
+assertEquals()
+assertNotNull()
+assertNull()
+assertTrue()
+assertFalse()
+
+Exercise 4: AAA Pattern, Test Fixtures, Setup and Teardown Methods
+
+BankAccount Class and JUnit Test using:
+@BeforeEach
+@AfterEach
+
+AAA Pattern:
+Arrange -> double amount = 500;
+Act -> account.deposit(amount);
+Assert -> assertEquals(1500, account.getBalance());
+
+Mockito Exercise 1: Mocking and Stubbing
+
+ExternalApi Interface
+DataService Class
+
+Mockito Concepts:
+mock() -> Creates a fake object
+when() -> Defines behavior
+thenReturn() -> Returns mock value
+
+Mockito Exercise 2: Verifying Interactions
+
+NotificationService Interface
+UserService Class
+
+Verification Examples:
+verify(notificationMock).sendNotification(anyString());
+
+verify(notificationMock, times(1))
+    .sendNotification(anyString());
+
+verify(notificationMock, never())
+    .sendNotification(anyString());
+
