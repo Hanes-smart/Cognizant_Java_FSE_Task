@@ -7,4 +7,5 @@ The repository covers core Java, Object-Oriented Programming, Design Patterns, D
 The primary objective of this repository is to strengthen my understanding of Java Full Stack development through practical implementation and continuous learning.
 
 ---
-**Author:** Abishek M
+**Author:**  Hanes Harini A
+
