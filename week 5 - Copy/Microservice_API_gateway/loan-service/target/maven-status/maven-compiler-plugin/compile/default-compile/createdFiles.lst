@@ -1,0 +1,4 @@
+com/abishek/loanservice/controller/LoanController.class
+com/abishek/loanservice/model/Loan.class
+com/abishek/loanservice/LoanServiceApplication.class
+com/abishek/loanservice/service/LoanService.class
